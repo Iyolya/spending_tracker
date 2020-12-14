@@ -12,3 +12,6 @@ class TestTransaction(unittest.TestCase):
 
     def test_transaction_has_merchant(self):
         self.assertEqual("Overlook Hotel", self.transaction.merchant)
+
+    def test_transaction_has_amount(self):
+        self.assertEqual(1912, self.transaction.amount)
