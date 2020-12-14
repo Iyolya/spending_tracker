@@ -7,3 +7,5 @@ class TestTag(unittest.TestCase):
 
         self.tag = Tag("Holidays")\
 
+    def test_tag_has_name(self):
+        self.assertEqual("Holidays", self.tag.name)
