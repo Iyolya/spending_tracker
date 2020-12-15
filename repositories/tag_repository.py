@@ -17,3 +17,13 @@ def select_all(tag):
         tag = Tag(row['name'], row['id'])
         tags.append(tag)
     return tags
+
+def select(id):
+    tag = None
+    sql = "SELECT * FROM tags WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        tag = Tag(result['id'])
+    return tag
