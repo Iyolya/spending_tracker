@@ -8,3 +8,10 @@ CREATE TABLE tags(
     name VARCHAR(255)
 );
 
+CREATE TABLE transactions(
+    id SERIAL PRIMARY KEY,
+    tag_id REFERENCES tags(id),
+    merchant_id REFERENCES merchants(id),
+    amount INT
+
+);
