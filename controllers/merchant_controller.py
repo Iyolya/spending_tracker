@@ -16,3 +16,12 @@ def merchants():
 @merchants_blueprint.route("/merchants/new")
 def new_merchant():
     return render_template("merchants/new.html")
+
+
+
+@merchants_blueprint.route("/merchants", methods=["POST"])
+def create_merchant():
+    name = request.form["name"]
+    new_merchant = Merchant(name)
+    merchant_repository.save(new_merchant)
+    return redirect("/merchants")
