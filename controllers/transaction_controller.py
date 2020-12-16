@@ -13,3 +13,21 @@ def transactions():
     total = transaction_repository.total()
     return render_template("transactions/index.html", transactions=transactions, total=total)
 
+
+
+@transactions_blueprint.route("/transactions/new")
+def new_transaction():
+    merchants = merchant_repository.select_all()
+    tags = tag_repository.select_all()
+    return render_template("transactions/new.html", merchants=merchants, tags=tags)
+
+
+
+@transactions_blueprint.route("/transactions", methods=["POST"])
+def create_transaction():
+    tag_id = tag_repository.select(request.form["tag_id"])
+    merchant_id = merchant_repository.select(request.form["merchant_id"])
+    amount = request.form["amount"]
+    new_transaction = Transaction(tag_id, merchant_id, amount)
+    transaction_repository.save(new_transaction)
+    return redirect("/transactions")
