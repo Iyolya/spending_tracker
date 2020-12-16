@@ -13,9 +13,11 @@ def tags():
     return render_template("tags/index.html", tags = tags)
 
 
+
 @tags_blueprint.route("/tags/new")
 def new_tag():
     return render_template("tags/new.html")
+
 
 
 @tags_blueprint.route("/tags", methods=["POST"])
