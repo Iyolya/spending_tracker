@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+	{% block content %}
+	
+	<h2>Transactions</h2>
+	
+	<section>
+	    <p>Total amount spent: <b>£{{ total }}</b></p>
+	</section>
+	
+	{% for transaction in transactions %}
+	
+	<section>
+	    <ul>
+	        <li><b>£{{ transaction.amount }}</b> at <b>{{ transaction.merchant.name }}</b><br><b><b>{{ transaction.tag.category }}</b></li>
+	    </ul>
+	</section>
+	
+	{% endfor %}
+	{% endblock %}
