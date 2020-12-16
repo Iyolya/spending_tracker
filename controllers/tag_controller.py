@@ -16,3 +16,11 @@ def tags():
 @tags_blueprint.route("/tags/new")
 def new_tag():
     return render_template("tags/new.html")
+
+
+@tags_blueprint.route("/tags", methods=["POST"])
+def create_tag():
+    name = request.form["name"]
+    new_tag = Tag(name)
+    tag_repository.save(new_tag)
+    return redirect("/tags")
