@@ -27,7 +27,7 @@ tag3 = Tag("Eating out")
 tag_repository.save(tag3)
 
 
-transaction1 = Transaction("Holidays", "Overlook Hotel", 1313)
+transaction1 = Transaction("Holidays", "verlook Hotel", 1313)
 transaction_repository.save(transaction1)
 
 transaction2 = Transaction("Self-development", "Stars Hollow Library", 30)
