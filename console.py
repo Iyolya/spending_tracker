@@ -15,13 +15,13 @@ merchant3 = Merchant("Luke's Diner")
 merchant_repository.save(merchant3)
 
 
-tag1 = Tag("Having some fun")
+tag1 = Tag("Holidays")
 tag_repository.save(tag1)
 
 tag2 = Tag("Self-development")
 tag_repository.save(tag2)
 
-tag3 = Tag("Food")
+tag3 = Tag("Eating out")
 tag_repository.save(tag3)
 
 
