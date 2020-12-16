@@ -8,7 +8,7 @@ def save(tag):
     tag.id  = results[0]['id']
     return tag
 
-def select_all(tag):
+def select_all():
     tags = []
     sql = "SELECT * FROM tags"
     results = run_sql(sql)
@@ -25,5 +25,5 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        tag = Tag(result['id'])
+        tag = Tag(result['name'], result['id'])
     return tag

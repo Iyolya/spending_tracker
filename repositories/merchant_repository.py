@@ -8,7 +8,7 @@ def save(merchant):
     merchant.id  = results[0]['id']
     return merchant
 
-def select_all(merchant):
+def select_all():
     merchants = []
     sql = "SELECT * FROM merchants"
     results = run_sql(sql)
@@ -25,5 +25,5 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        merchant = Merchant(result['id'])
+        merchant = Merchant(result['name'], result['id'])
     return merchant

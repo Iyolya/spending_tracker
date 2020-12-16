@@ -1,5 +1,4 @@
 from flask import Blueprint, Flask, redirect, render_template, request
-
 from models.transaction import Transaction
 import repositories.merchant_repository as merchant_repository
 import repositories.tag_repository as tag_repository
@@ -25,9 +24,9 @@ def new_transaction():
 
 @transactions_blueprint.route("/transactions", methods=["POST"])
 def create_transaction():
-    tag_id = tag_repository.select(request.form["tag_id"])
-    merchant_id = merchant_repository.select(request.form["merchant_id"])
+    tag = tag_repository.select(request.form["tag_id"])
+    merchant = merchant_repository.select(request.form["merchant_id"])
     amount = request.form["amount"]
-    new_transaction = Transaction(tag_id, merchant_id, amount)
+    new_transaction = Transaction(tag, merchant, amount)
     transaction_repository.save(new_transaction)
     return redirect("/transactions")

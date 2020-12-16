@@ -6,7 +6,7 @@
 	{% for tag in tags %}
 	
 	<section>
-	    <p>{{ tag.category }}</p>
+	    <p>{{ tag.name }}</p>
 	    <a href="/tags/{{ tag.id }}/edit"></a>
 	    <form action="/tags/{{ tag.id }}/edit">
 	        <input type="submit" value="Edit">
