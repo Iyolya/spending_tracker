@@ -1,49 +1,73 @@
 body {
-    background-image: url(https://thumbs.dreamstime.com/b/color-money-background-stationery-739106.jpg);
-    color:white
+    background-image: url(/static/images/antique_library_desk-wallpaper-1920x1080.jpg);
+    color:white;
     display: inline-block;
     padding: 1em 1em 1em 1em;
 }
 
 
 body > header > h1 {
-    display: inline-block;
-    padding: 0.5em 0.5em 0.5em 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+/*     padding: 1em 1em 1em 1em; */
     color: green;
-
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    width: 158%;
+    font-size: 70px;
+    color: wheat;
+    background-image: url(https://wallpapercave.com/wp/CQSqgRW.jpg);
+    box-shadow: 10px 10px 8px #000000;
+     
 }
 
 body > h3 {
     display: inline-block;
-    padding: 1em 1em 1em 1em
+    padding: 1em 1em 1em 1em;
+    color: wheat;
 }
 
 body > header > nav > ul {
-    display: inline-block;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     padding: 1em 1em 1em 1em;
-    background-color: rgb(75, 123, 75);
-    color: rgb(2, 28, 2);
+    background-color: black;
+    background: rgba(0, 0, 0, 0.5);
+    color: wheat;
+    width: 40%;
+    background-image: url(https://wallpapercave.com/wp/CQSqgRW.jpg);
+    box-shadow: 10px 10px 8px #000000;
+
 
 }
 
 .container {
     align-content: center;
-    display: inline-block;
+    display:  inline-block;
     padding: 0.1em 1.5em 0.1em 1.5em;
-    background-color: white;
-    color: green
+    background-color: black;
+    background: rgba(0, 0, 0, 0.5);
+    color: wheat;
+    background-image: url(https://wallpapercave.com/wp/CQSqgRW.jpg);
+    box-shadow: 10px 10px 8px #000000;
 }
 
 .container > section > ul > li {
     display: inline-block;
-    background-color: white;
-    color: green
+    background-color: black;
+    background: rgba(0, 0, 0, 0.5);
+    color: wheat;
+
 }
 
+
 a:link {
-    color:dark rgb(0, 22, 7)
+    color:wheat;
 }
 
 a:visited {
-    color:white
+    color:wheat;
 }
